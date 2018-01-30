@@ -3,4 +3,18 @@
 
 ![WhySoSerial](https://github.com/jimmystelzer/WhySoSerial/raw/master/artwork/wsserial.png "teste")
 
-A modern, lightweight and powerful graphical serial terminal
+A modern, lightweight, powerful, free, opensource graphical serial terminal
+
+## Planned features
+- [ ] Cross-platform (Linux / Windows);
+- [ ] Lightweight (Static linked / Small executable / No external dependency);
+- [ ] Modern (C++14 / Graphical User Interface);
+- [ ] Free and OpenSource (With permissive [LICENSE](https://github.com/jimmystelzer/WhySoSerial/blob/master/LICENSE))
+- [ ] ASCII viewer mode;
+- [ ] HEX viewer mode;
+- [ ] ASCII input mode;
+- [ ] HEX input mode;
+- [ ] Can save to log file;
+- [ ] Wait for string with regular expressions (count occurrences);
+- [ ] Toggleable timestamp (Localized);
+- [ ] Internationalization support (Multi-language support / Environment language detection);
