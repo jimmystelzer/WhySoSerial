@@ -1,0 +1,16 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0304
+header_name {.h}
+code_name {.cxx}
+Function {make_window()} {open selected
+} {
+  Fl_Window {} {
+    label WhySoSerial open
+    xywh {290 190 695 230} type Double align 80 resizable size_range {600 250 0 0} visible
+  } {
+    Fl_Button {} {
+      label Open
+      xywh {10 10 75 30}
+    }
+  }
+}

@@ -1,0 +1,15 @@
+message(STATUS "FLTK inc = ${FLTK_INCLUDE_DIR}")
+include_directories(${FLTK_INCLUDE_DIR})
+fltk_wrap_ui(WSSUi WhySoSerial.fl)
+add_library(WSSUi STATIC ${WSSUi_FLTK_UI_SRCS})
+
+add_executable(wsserial wsserial.cxx)
+add_dependencies(wsserial WSSUi)
+target_link_libraries(wsserial WSSUi)
+target_link_libraries(wsserial ${FLTK_LIBRARIES})
+#if(WIN32)
+#	if(MSVC)
+#		set_target_properties(wsserial PROPERTIES LINK_FLAGS_RELEASE "/SUBSYSTEM:WINDOWS")
+#	endif()
+#endif()
+
