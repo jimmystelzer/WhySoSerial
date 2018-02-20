@@ -15,7 +15,7 @@ if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
 endif()
 
 find_package(FLTK REQUIRED)
-include_directories(${FLTK_INCLUDE_DIRS}) 
+include_directories(${FLTK_INCLUDE_DIR}) 
 link_directories(${FLTK_LIBRARY_DIRS}) 
 add_definitions(${FLTK_DEFINITIONS})
 
