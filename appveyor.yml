@@ -17,7 +17,10 @@ matrix:
 
 install:
   - cinst cmake
-  - SET PATH="C:\Program Files\CMake\bin;%PATH%"
+  - cinst git
+  - set PATH=c:\Program Files\CMake\bin;%PATH%
+  - set PATH=c:\Program Files\Git\mingw64\bin;%PATH%
+  - set PATH=c:\Program Files\Git\bin;%PATH%
   - cd c:\projects\  
   - git clone https://github.com/Microsoft/vcpkg.git
   - cd c:\projects\vcpkg
