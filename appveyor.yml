@@ -29,7 +29,6 @@ install:
   - .\vcpkg install fltk
   - SET PATH="C:\projects\vcpkg\installed\x86-windows\tools\fltk;%PATH%"
   - cd c:\projects\WhySoSerial
-  - mkdir build
   - cd build
 
 before_build:
