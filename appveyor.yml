@@ -16,22 +16,9 @@ matrix:
   fast_finish: true
 
 install:
-  - cinst cmake
-  - cinst git
-  - set PATH=c:\Program Files\CMake\bin;%PATH%
-  - set PATH=c:\Program Files\Git\mingw64\bin;%PATH%
-  - set PATH=c:\Program Files\Git\bin;%PATH%
-  - cd c:\projects\  
-  - git clone https://github.com/Microsoft/vcpkg.git
-  - cd c:\projects\vcpkg
-  - .\bootstrap-vcpkg.bat
-  - .\vcpkg integrate install
-  - .\vcpkg install fltk
-  - SET PATH="C:\projects\vcpkg\installed\x86-windows\tools\fltk;%PATH%"
-  - cd c:\projects\WhySoSerial
-  - cd build
+  - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
+  - vcpkg install fltk
 
-before_build:
-  - cmake -DCMAKE_TOOLCHAIN_FILE=c:\projects\vcpkg\scripts\buildsystems\vcpkg.cmake -DFLTK_FLUID_EXECUTABLE:string="C:\projects\vcpkg\installed\x86-windows\tools\fltk\fluid.exe" -G "Visual Studio 15 2017 Win64" ../
 build_script:
+  - cmake -DCMAKE_TOOLCHAIN_FILE=c:\tools\vcpkg\scripts\buildsystems\vcpkg.cmake -G "Visual Studio 15 2017 Win64" ../
   - cmake --build . --config Release
