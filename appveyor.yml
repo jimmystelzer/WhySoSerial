@@ -17,7 +17,8 @@ matrix:
 
 install:
   - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
-  - vcpkg install fltk
+  - vcpkg install fltk:x64-windows
+  - vcpkg integrate install
 
 build_script:
   - cd build
