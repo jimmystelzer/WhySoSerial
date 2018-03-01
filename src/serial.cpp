@@ -58,7 +58,6 @@ namespace WSS{
 
 			// lpTargetPath is a block of concatened cstrings with \0 separators
 			for(token = lpTargetPath; *token; token+=strlen(token)+1){
-				cout << "Entry: " << token << endl;
 				string device_name(token);
 
 				if(device_name.compare(0, 3, "COM") == 0){
